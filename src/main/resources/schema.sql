@@ -1,5 +1,10 @@
-CREATE TABLE IF NOT EXISTS widgets (
+CREATE TABLE IF NOT EXISTS authors(
     id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    purpose VARCHAR(255)
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS books(
+    isbn VARCHAR(20) PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    author_id INT NOT NULL REFERENCES authors(id)
 );

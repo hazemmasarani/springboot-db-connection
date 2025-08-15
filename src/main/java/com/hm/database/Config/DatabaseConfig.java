@@ -1,4 +1,4 @@
-package com.hm.database.Config;
+package com.hm.database.config;
 
 import javax.sql.DataSource;
 
@@ -13,5 +13,5 @@ public class DatabaseConfig {
     public JdbcTemplate jdbcTemplate(DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
-    
+
 }
